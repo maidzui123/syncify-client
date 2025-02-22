@@ -1,5 +1,5 @@
-export const BASE_URL = 'http://localhost:3000';
-export const SOCKET_URL = 'ws://localhost:3000';
+export const BASE_URL = 'https://abc.wesap.vn';
+export const SOCKET_URL = 'wss://abc.wesap.vn';
 
 export const AUTH_URL = {
     REGISTER_URL: '/api/register',
