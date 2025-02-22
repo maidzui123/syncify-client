@@ -16,6 +16,7 @@ const ContactList = () => {
     const [friends, setFriends] = useState<userDataDef[]>([])
     const [friendCursor, setFriendCursor] = useState<string>('')
     const locale = useSelector((state:RootState) => state.locale.value)
+    console.log("🚀 ~ ContactList ~ locale:", locale)
 
     const chatloadingRef = useRef<HTMLDivElement>(null)
     const navigate = useNavigate()

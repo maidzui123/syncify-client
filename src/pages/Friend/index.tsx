@@ -28,6 +28,7 @@ const FriendItem = (props: friendItemProps) => {
     const {userData, isFriendRequest, mutualFriends, friendReqId, onReqAction, onUnfriend} = props;
 
     const locale = useSelector((state:RootState) => state.locale.value)
+    console.log("🚀 ~ FriendItem ~ locale:", locale)
 
     const { toast } = useToast()
 

@@ -267,6 +267,7 @@ const AuthPage = () => {
   const [isForgetPw, setIsForgetPw] = useState(false);
   const [newUserStep, setNewUserStep] = useState<AUTH_SCREEN>(AUTH_SCREEN.AUTH);
   const locale = useSelector((state: RootState) => state.locale.value)
+  console.log("🚀 ~ AuthPage ~ locale:", locale)
   // const dispatch = useDispatch()
 
   // const handleChangeLocale = (locale: localeType) => {

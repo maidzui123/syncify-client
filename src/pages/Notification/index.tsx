@@ -19,6 +19,7 @@ const NotificationPage = () => {
 
     const notiLoadingRef = useRef<HTMLDivElement>(null)
     const locale = useSelector((state:RootState) => state.locale.value)
+    console.log("🚀 ~ NotificationPage ~ locale:", locale)
 
     useEffect(() => {
         handleGetNotifications()

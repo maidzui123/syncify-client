@@ -1,10 +1,7 @@
-import { LOGIN_TYPE } from "@/constants/enum/auth.ts";
 import Lottie from "lottie-react";
 import Resources from "@/constants/resource.ts";
-import { Countdown, OTP } from "@/components";
 import { motion } from "motion/react";
 import { Button, Input } from "@/components/ui";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { AUTH_URL } from "@/constants/api.ts";
@@ -13,7 +10,7 @@ import { RootState } from "@/redux/store.ts";
 import { setAuthData } from "@/redux/reducers/authReducer";
 import { useToast } from "@/hooks/use-toast";
 import { setLoading } from "@/redux/reducers/loadingReducer";
-import { set, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { forgetPasswordDef } from "@/constants/types/auth";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { forgetPasswordSchema } from "@/utils/validate";
@@ -27,6 +24,7 @@ const ForgetPassword = (props: ForgetPasswordProps) => {
   const { handleBack, onDone } = props;
 
   const auth = useSelector((state: RootState) => state.auth.value);
+  console.log("🚀 ~ ForgetPassword ~ auth:", auth)
   const dispatch = useDispatch();
 
   const { t } = useTranslation();

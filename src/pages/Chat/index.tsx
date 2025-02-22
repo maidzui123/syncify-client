@@ -23,6 +23,7 @@ const ChatPage = () => {
 
     const userData = useSelector((state: RootState) => state.auth.value.user)
     const locale = useSelector((state:RootState) => state.locale.value)
+    console.log("🚀 ~ ChatPage ~ locale:", locale)
     const chatScrollRef = useRef<HTMLDivElement>(null)
 
     useSocket()
